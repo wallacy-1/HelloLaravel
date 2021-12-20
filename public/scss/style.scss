@@ -1,0 +1,90 @@
+@import 'variaveis';
+
+*{
+    font-family: 'Roboto';
+}
+
+
+#nav-img{
+    width: 50px;
+}
+
+.msg{
+    background-color: lightgreen;
+    border: solid 2px green;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+#banner-search{
+
+    height: 70vh;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+
+    text-align: center;
+    padding: 50px;
+
+    h1{
+        color: $primary-color;
+        font-weight: 900;
+    }
+}
+
+#event{
+
+    span{
+        position: absolute;
+        background-color: black;
+        color: $primary-color;
+        padding: 3px;
+        opacity: 0.7;
+
+        border-radius: 5;
+    }
+
+    &:hover{
+        span{
+            opacity: 1;
+            color: $secondary-color;
+        }
+    }
+}
+
+.btn-primary{ //botao
+    background-color: $primary-color !important;
+    border: solid 2px $secondary-color !important;
+
+    &:hover{
+        background-color: $secondary-color !important;
+    }
+}
+
+//pag create event
+#event-create-container{
+    padding: 30px;
+    height: 80vh;
+
+    label{
+        font-weight: bold;
+    }
+
+    input, select, text-area{
+        font-size: 12px;
+    }
+}
+
+#footer{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(68, 66, 66);
+
+    text-align: center;
+
+    p{
+        color: white;
+        padding-top: 2%;
+    }
+}
