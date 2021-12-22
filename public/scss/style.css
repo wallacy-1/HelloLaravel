@@ -52,8 +52,7 @@
 }
 
 #event-create-container {
-  padding: 30px;
-  height: 80vh;
+  padding: 10px;
 }
 
 #event-create-container label {
@@ -66,7 +65,7 @@
 
 #footer {
   width: 100%;
-  height: 10vh;
+  height: 13vh;
   background-color: #444242;
   text-align: center;
 }
@@ -74,5 +73,15 @@
 #footer p {
   color: white;
   padding-top: 2%;
+}
+
+#event-details {
+  height: 80vh;
+}
+
+#info-container ion-icon {
+  font-size: 20px;
+  color: #F2A340;
+  margin-right: 5px;
 }
 /*# sourceMappingURL=style.css.map */

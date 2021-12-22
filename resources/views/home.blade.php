@@ -16,7 +16,7 @@
     @foreach( $events as $event)
     <div class="col p-1">
         <div id="event" class="card h-100">
-            <img class="card-img-top" src="../img/event-img.jpg" alt="...">
+            <img class="card-img-top" src="../img/events/{{ $event-> image}}" alt="...">
             <span>
                 @if($event -> private == 0)
                 PUBLICO
@@ -27,7 +27,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{$event -> title}}</h5>
                 <p class="card-text"> X Participantes</p>
-                <a href="#" class="btn btn-primary">Saber mais</a>
+                <a href="/events/{{$event -> id}}" class="btn btn-primary">Saber mais</a>
             </div>
             <div class="card-footer">
                 <small class="text-muted">Dia: 10/12/2022</small>
