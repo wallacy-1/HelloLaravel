@@ -30,11 +30,14 @@
                 <a href="/events/{{$event -> id}}" class="btn btn-primary">Saber mais</a>
             </div>
             <div class="card-footer">
-                <small class="text-muted">Dia: 10/12/2022</small>
+                <small class="text-muted">Dia: {{date('d/m/Y', strtotime($event -> date))}}</small>
             </div>
         </div>
     </div>
     @endforeach
+    @if(count($events)== 0)
+        <p>Não há eventos disponiveis</p>
+    @endif
 </div>
 
 

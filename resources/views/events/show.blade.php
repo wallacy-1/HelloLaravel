@@ -17,6 +17,9 @@
             <p class="event-city">
                 <ion-icon name="location-outline"></ion-icon> {{ $event->city }}
             </p>
+            <p class="event-owner">
+                <ion-icon name="alarm-outline"></ion-icon> Data do evento: {{date('d/m/Y', strtotime($event->date))}}
+            </p>
             <p class="events-participants">
                 <ion-icon name="people-outline"></ion-icon> X Participantes
             </p>
