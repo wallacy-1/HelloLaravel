@@ -2,6 +2,12 @@
   font-family: 'Roboto';
 }
 
+body {
+  min-height: 100vh;
+  padding-bottom: 100px;
+  position: relative;
+}
+
 #nav-img {
   width: 50px;
 }
@@ -63,25 +69,52 @@
   font-size: 12px;
 }
 
-#footer {
-  width: 100%;
-  height: 13vh;
-  background-color: #444242;
-  text-align: center;
-}
-
-#footer p {
-  color: white;
-  padding-top: 2%;
-}
-
-#event-details {
-  height: 80vh;
-}
-
 #info-container ion-icon {
   font-size: 20px;
   color: #F2A340;
   margin-right: 5px;
+}
+
+#items-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#items-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#form-bottom-container {
+  width: 81%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#form-bottom-container ion-icon {
+  color: #F2A340;
+  margin-right: 5px;
+}
+
+#footer {
+  text-align: center;
+  background-color: #353E48;
+  color: #FFF;
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  #footer {
+    bottom: 0;
+    position: absolute;
+  }
 }
 /*# sourceMappingURL=style.css.map */
