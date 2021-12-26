@@ -17,7 +17,10 @@ use App\Http\Controllers\HomeControler;
 
 route::get('/', [HomeControler::class, 'index']);
 
-route::get('/events/create', [HomeControler::class, 'create']);
+route::get('/events/create', [HomeControler::class, 'create'])->middleware('auth');
 route::get('/events/{id}', [HomeControler::class, 'show']);
 
 route::post('/events', [HomeControler::class, 'store']);
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

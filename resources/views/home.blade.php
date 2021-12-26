@@ -5,13 +5,15 @@
 
 <div id="banner-search" class="col-md-12">
     <h1>Busque um evento</h1>
-    <form action="">
-        <input type="search" id="search" class="form-control" placeholder="Procurar...">
+    <form action="/" method="GET">
+        <input type="search" name="search" id="search" class="form-control" placeholder="Procurar...">
     </form>
 </div>
-
-<h5 class="p-3">Veja os eventos dos próximos dias</h5>
-
+@if($search)
+    <h2 class="p-3">Buscando por: {{$search}}</h2>
+@else
+    <h2 class="p-3">Veja os eventos dos próximos dias</h2>
+@endif
 <div class="row row-cols-1 row-cols-md-4 rounded-3 p-3 w-100">
     @foreach( $events as $event)
     <div class="col p-1">
@@ -35,7 +37,9 @@
         </div>
     </div>
     @endforeach
-    @if(count($events)== 0)
+    @if(count($events)== 0 && $search)
+        <p>Não foi possivel encontrar nenhum evento com {{$search}} <a href="/">Ver todos</a></p>
+    @elseif(count($events)== 0)
         <p>Não há eventos disponiveis</p>
     @endif
 </div>
