@@ -21,6 +21,5 @@ route::get('/events/create', [HomeControler::class, 'create'])->middleware('auth
 route::get('/events/{id}', [HomeControler::class, 'show']);
 
 route::post('/events', [HomeControler::class, 'store']);
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+
+route::get('/dashboard', [HomeControler::class, 'dashboard'])->middleware('auth');
