@@ -19,6 +19,7 @@ route::get('/', [HomeControler::class, 'index']);
 
 route::get('/events/create', [HomeControler::class, 'create'])->middleware('auth');
 route::get('/events/{id}', [HomeControler::class, 'show']);
+route::delete('/events/{id}',[HomeControler::class,'destroy']);
 
 route::post('/events', [HomeControler::class, 'store']);
 
