@@ -19,7 +19,9 @@ route::get('/', [HomeControler::class, 'index']);
 
 route::get('/events/create', [HomeControler::class, 'create'])->middleware('auth');
 route::get('/events/{id}', [HomeControler::class, 'show']);
-route::delete('/events/{id}',[HomeControler::class,'destroy']);
+route::delete('/events/{id}',[HomeControler::class,'destroy'])->middleware('auth');
+route::get('/events/edit/{id}', [HomeControler::class, 'edit'])->middleware('auth');
+route::put('/events/update/{id}', [HomeControler::class, 'update'])->middleware('auth');
 
 route::post('/events', [HomeControler::class, 'store']);
 
