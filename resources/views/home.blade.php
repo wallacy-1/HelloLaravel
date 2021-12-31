@@ -28,7 +28,7 @@
             </span>
             <div class="card-body">
                 <h5 class="card-title">{{$event -> title}}</h5>
-                <p class="card-text"> X Participantes</p>
+                <p class="card-text"> {{ count($event->users) }} Participantes</p>
                 <a href="/events/{{$event -> id}}" class="btn btn-primary">Saber mais</a>
             </div>
             <div class="card-footer">

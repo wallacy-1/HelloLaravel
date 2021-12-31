@@ -26,3 +26,5 @@ route::put('/events/update/{id}', [HomeControler::class, 'update'])->middleware(
 route::post('/events', [HomeControler::class, 'store']);
 
 route::get('/dashboard', [HomeControler::class, 'dashboard'])->middleware('auth');
+
+route::post('/events/join/{id}', [HomeControler::class, 'joinEvent'])->middleware('auth');
