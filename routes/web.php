@@ -28,3 +28,5 @@ route::post('/events', [HomeControler::class, 'store']);
 route::get('/dashboard', [HomeControler::class, 'dashboard'])->middleware('auth');
 
 route::post('/events/join/{id}', [HomeControler::class, 'joinEvent'])->middleware('auth');
+
+route::delete('/events/leave/{id}', [HomeControler::class, 'leaveEvent'])->middleware('auth');

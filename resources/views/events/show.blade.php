@@ -27,10 +27,14 @@
                 <p class="event-owner">
                     <ion-icon name="star-outline"></ion-icon> {{$eventOwner['name']}}
                 </p>
-                <form action="/events/join/{{ $event->id }}" method="post">
-                    @csrf
-                    <a href="/events/join/{{ $event->id }}" class="btn btn-primary" id="event-submit" onclick="event.preventDefault(); this.closest('form').submit();">Confirmar Presença</a>
-                </form>
+                @if(!$hasUserJoined)
+                    <form action="/events/join/{{ $event->id }}" method="post">
+                        @csrf
+                        <a href="/events/join/{{ $event->id }}" class="btn btn-primary" id="event-submit" onclick="event.preventDefault(); this.closest('form').submit();">Confirmar Presença</a>
+                    </form>
+                @else
+                    <p class="already-joined-msg">Você ja esta inscrito neste evento. <a href="/dashboard">Meus eventos</a></p>
+                @endif
             </div>
             <div class="mt-3">
                 <h3>O evento conta com:</h3>

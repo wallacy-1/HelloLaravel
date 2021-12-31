@@ -106,6 +106,14 @@ body {
   margin-right: 5px;
 }
 
+.already-joined-msg {
+  margin: 15px 0;
+  color: black;
+  background-color: #F2A340;
+  border: 2px solid #C28008;
+  text-align: center;
+}
+
 #footer {
   text-align: center;
   background-color: #353E48;
